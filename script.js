@@ -14,13 +14,12 @@ const collectEmployees = function() {
 
   console.log(firstName, lastName, salary)
   salary = parseInt(salary)
-  allEmployees.push({'firstName': firstName, 'lastName': lastName, 'salary': salary }); // we commanded to put all these info from array inside the allEmployee which is the global on top
-
+  allEmployees.push({'firstName': firstName, 'lastName': lastName, 'salary': salary }); 
 
     // another question to ask the user if they want to add another employee
   const addAnotherEmployee = confirm('add another employee');
   
-  // if they do, ask the above questions again, otherwise just return an array of employees
+   // if they do, ask the above questions again, otherwise just return an array of employees
   if (addAnotherEmployee == true) {
     console.log('New Employee');
     collectEmployees();
@@ -39,10 +38,9 @@ const displayAverageSalary = function(employeesArray) {
   });
 
   console.log("The average employee salary between our "+ numberOfEployees + " employee(s) " + totalSalary); 
-  // Salary = parseFloat()
 }
 
-// // Select a random employee
+// Select a random employee
 const getRandomEmployee = function(employeesArray) {
 
   let randomEmployee = employeesArray[(Math.floor(Math.random() * employeesArray.length))];
